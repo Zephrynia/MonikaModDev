@@ -18040,3 +18040,49 @@ label monika_overton:
     m 1eua "I {i}could{/i} finish this story right up to Current Norm, but I just wanted to describe it at a basic level in order to convey an example of how it can work."
     m 1huu "Thanks for listening~"
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_rpss",
+            category=["Us"],
+            prompt="Example topic",
+            random=True
+        )
+    )
+
+label monika_rpss:
+    m 1esc "Hey. [player]."
+    m 7esd "This is extremely important, so pay attention."
+    m 7efd "This next question is super important. Your answer will reveal a lot about you, and it's a dangerous question."
+    m 2ffw "It could even mean the end of the universe as we know it!"
+    m 2dssdlc "So, please take this seriously."
+    m 2dsc "..."
+    m 1cuc "...Rock, paper, or scissors?"
+     menu:
+        m "...Rock, paper, or scissors{fast}"
+
+        "Rock.":
+            m 2wuc "...Um..."
+            m 2rtsdld "Well, I guess that's fine. Thank you for answering."
+
+        "Paper.":
+            m 7sua "Oh my gosh, thank you so much!"
+            m 7huu "I'm so glad you know that paper is the correct answer!"
+
+        "Scissors.":
+            m 6cssdrc "...What?"
+            m 6cksdrd "Y-You don't mean that, do you?"
+            m 6cfx "[player]..."
+            m 6wfo "I thought I knew you better than this! How could you pick scissors?"
+            m 6wktpw "Now my world's gonna get deleted, and I'll never get to see you again!"
+
+    m 6dstpc "..."
+    m 6hsu "..."
+    m 4ttb "I got you, didn't I?"
+    m 4hkb "Don't worry, nothing's going to happen. I made it all up."
+    m 3tfu "Ahaha~ I wish I could've seen the look on your face when I said that!"
+    m 5ekbsa "Don't worry [player], I'm not mad at you. Let's get on with our day, okay?"
+    m 5fkbsa "Remember that I will always love you. None of those options you chose would affect the love I have for you."
+    return "love"
